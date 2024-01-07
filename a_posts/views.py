@@ -90,7 +90,7 @@ def post_edit_view(request, pk):
     form = PostEditForm(instance=post)
     
     if request.method == "POST":
-        form = PostEditForm(request.POST, instance=post)
+        form = PostEditForm(request.POST, request.FILES, instance=post)
         if form.is_valid():
             form.save()
             messages.success(request, "Post updated")

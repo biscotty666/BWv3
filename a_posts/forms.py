@@ -5,7 +5,7 @@ from .models import *
 class PostCreateForm(ModelForm):
     class Meta:
         model = Post
-        fields = ['url', 'body', 'tags']
+        fields = ['url', 'art', 'body', 'tags']
         labels = {
             'body': 'Article',
             'tags': 'Category',
@@ -14,12 +14,13 @@ class PostCreateForm(ModelForm):
             'body': forms.Textarea(attrs={'rows': 3, 'placeholder': 'Add markdown...', 'class': 'text-xl'}),
             'url': forms.TextInput(attrs={'placeholder': 'Add url ...'}),
             'tags': forms.CheckboxSelectMultiple(),
+            'art': forms.FileInput(),
         }
         
 class PostEditForm(ModelForm):
     class Meta:
         model = Post
-        fields = ['body', 'tags']
+        fields = ['body', 'art', 'tags']
         labels = {
             'body' : 'Article',
             'tags': 'Category',
@@ -27,6 +28,7 @@ class PostEditForm(ModelForm):
         widgets = {
             'body' : forms.Textarea(attrs={'rows': 3, 'placeholder': 'Add markdown...', 'class': 'text-xl'}),
             'tags': forms.CheckboxSelectMultiple(),
+            'art': forms.FileInput(),
         }
 
 class CommentCreateForm(ModelForm):
