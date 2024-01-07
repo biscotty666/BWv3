@@ -60,6 +60,9 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
     'django_cleanup.apps.CleanupConfig',
+    'tailwind',
+    'django_browser_reload',
+    'theme',
     'a_posts',
     'a_users',
     'a_inbox',
@@ -76,11 +79,14 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django_htmx.middleware.HtmxMiddleware',
     "allauth.account.middleware.AccountMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 SITE_ID = 1
 
 ROOT_URLCONF = 'a_core.urls'
+
+TAILWIND_APP_NAME = 'theme'
 
 TEMPLATES = [
     {

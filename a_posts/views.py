@@ -27,6 +27,7 @@ def home_view(request, tag=None):
         'posts': posts,
         'tag': tag,
         'page': page,
+        'home': True,
     }
     
     if request.htmx:
