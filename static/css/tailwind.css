@@ -7,9 +7,37 @@
   display: none !important;
 }
 :root {
-  --primary: rgb(88, 40, 244);
-  --primary-hover: rgb(69, 29, 200);
+  --primary: rgb(98, 1, 112);
+  --primary-hover: rgb(69, 1, 100);
   --black: #1f2937;
+  --primary-color: rgb(98, 1, 112);
+  --secondary-color: blue;
+  --cactus-primary-1: rgb(255, 231, 58);
+  --cactus-primary-2: rgb(255, 251, 23);
+  --cactus-primary-3: rgb(255, 244, 153);
+  --cactus-primary-4: rgb(204, 181, 0);
+  --cactus-primary-5: rgb(171, 151, 0);
+  --cactus-secondary-1-1: rgb(222, 246, 57);
+  --cactus-secondary-1-2: rgb(249, 253, 221);
+  --cactus-secondary-1-3: rgb(238, 251, 151);
+  --cactus-secondary-1-4: rgb(173, 198, 0);
+  --cactus-secondary-1-5: rgb(145, 166, 0);
+  --cactus-secondary-2-1: rgb(151, 40, 166);
+  --cactus-secondary-2-2: rgb(223, 199, 226);
+  --cactus-secondary-2-3: rgb(189, 121, 199);
+  --cactus-secondary-2-4: rgb(117, 2, 134);
+  --cactus-secondary-2-5: rgb(98, 1, 112);
+  --cactus-complement-1: rgb(97, 52, 172);
+  --cactus-complement-2: rgb(212, 203, 228);
+  --cactus-complement-3: rgb(157, 129, 203);
+  --cactus-complement-4: rgb(59, 11, 139);
+  --cactus-complement-5: rgb(48, 6, 116);
+  --smoke-tree: #5b0028;
+  --smoke-tree-light: #945570;
+  --smoke-tree-dark: #41170c;
+  --burque-sky-primary: #0169d5;
+  --burque-sky-light: #4ca3fe;
+  --burque-sky-dark: #2413fe;
   --font1: 'Quicksand', sans-serif;
 }
 h1 {
@@ -39,20 +67,21 @@ button,
   border-radius: 0.5rem;
   cursor: pointer;
   padding: 0 1rem;
-  min-height: 3.3rem;
+  min-height: 2.0rem;
   font-weight: 600;
   box-shadow: 0 4px 3px rgba(0, 0, 0, 0.1);
   transition-property: transform;
   transition-duration: 0.2s;
   color: white;
-  background-color: var(--primary);
+  background-color: var(--cactus-complement-4);
   width: fit-content;
 }
+
 .button:hover,
 button:hover,
 [type='submit']:hover,
 [type='button']:hover {
-  background-color: var(--primary-hover);
+  background-color: var(--cactus-complement-1);
 }
 .button:active,
 button:active,

@@ -1,10 +1,15 @@
 {% load static %}
-<header x-data="{ mobilenavOpen: false }" class="md:flex items-center justify-between [&>*]:px-8 bg-dark h-20 text-white sticky top-0 z-40">
+<header x-data="{ mobilenavOpen: false }" class="md:flex items-center justify-between [&>*]:px-8 bg-gray-800 text-white h-20 sticky top-0 z-40">
     <div class="flex items-center justify-between h-20">
         <logo>
             <a class="flex items-center gap-1" href="/">
                 <img class="w-6 mr-1 -mt-1" src="{% static 'images/fireheart_white.svg' %}"/>
-                <span class="text-lg font-bold">Awesome</span>
+                <span class="lg:hidden text-lg font-bold text-accent dark:text-accentDark">
+                    bW
+                </span>
+                <span class="hidden lg:block text-lg font-bold text-accent dark:text-accentDark">
+                    biscotty's Workshop
+                </span>
             </a>
         </logo>
         <mobileicon class="md:hidden">
@@ -18,7 +23,7 @@
     x-transition:enter="duration-300 ease-out"
     x-transition:enter-start="opacity-0 -translate-y-96"
     x-transition:enter-end="opacity-100 translate-y-0">
-        <ul class="flex items-center navitems flex-col md:flex-row gap-8 md:gap-0 justify-center h-full -translate-y-10 md:translate-y-0">
+        <ul class="flex items-center navitems flex-col md:flex-row gap-8 md:gap-0 justify-center h-full -translate-y-10 md:translate-y-0 ">
             {% if user.is_authenticated %}
             <li><a href="/">Home</a></li>
             <li><a href="{% url 'post-create' %}">Create Post</a></li>

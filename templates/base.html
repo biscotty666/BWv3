@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="{% if debug %}{% static 'css/styles.css' %}{% else %}{% static 'css/style.min.css' %}{% endif %}">
     {% tailwind_css %}
   </head>
-  <body class="bg-gray-100">
+  <body class="bg-light dark:bg-dark dark:text-white">
     {% include 'includes/messages.html' %}
 
     {% include 'includes/header.html' %}
